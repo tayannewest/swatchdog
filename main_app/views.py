@@ -42,3 +42,7 @@ def signup(request):
   form = UserCreationForm()
   context = {"form": form, "error_message": error_message}
   return render(request, "signup.html", context)
+
+def artsupplies_detail(request, artsupply_id):
+  artsupply = Artsupply.objects.get(id=artsupply_id)
+  return render(request, "artsupplies/detail.html", {"artsupply": artsupply})

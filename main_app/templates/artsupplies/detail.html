@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/artsupply-detail.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="cat-container">
+  <div class="cat-img">
+    <img 
+      src="{% static 'images/sk8r-boi-cat.svg' %}" 
+      alt="A skater boy cat"
+    >
+  </div>
+  <div class="cat-details">
+    <h1>{{ artsupply.name }}</h1>
+      <h2>Art Supply: {{ artsupply.media }}</h2>
+      <h2>Brand: {{ artsupply.brand }}</h2>
+      <h3>Familiarity with this product: {{ artsupply.familiarity }}
+      </h3>
+      <h3>Would you recommend this? {{ artsupply.favorite}}</h3>
+      <p>{{ artsupply.description }}</p>
+  </div>
+</section>
+
+{% endblock %}
