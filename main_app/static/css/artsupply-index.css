@@ -14,11 +14,11 @@
 }
 
 .card-container .card:hover .card-img-container {
-  transform: translate(-3.5rem, -3.5rem);
+  transform: translate(-4rem, -4rem);
 }
 
 .card-container .card:hover .card-content {
-  transform: translate(3.5rem, 3.5rem);
+  transform: translate(4rem, 4rem);
 }
 
 .card-img-container {
@@ -47,7 +47,7 @@
   padding: 1.5rem;
   display: flex;
   justify-content: center;
-  background-color: #fff;
+  background-color: rgba(0, 46, 27, 0.7);
   z-index: 1;
   align-items: flex-end;
   text-align: center;
@@ -57,14 +57,14 @@
 .card-content h2 {
   display: block;
   font-size: 2rem;
-  color: #111;
+  color: #fff;
   font-weight: 500;
   line-height: 2.5rem;
   letter-spacing: 1px;
 }
 
 .card-content span {
-  color: #555;
+  color: #fff;
   font-size: 1.4rem;
   font-weight: 300;
   letter-spacing: 2px;
@@ -73,8 +73,6 @@
 .card {
   width: 275px;
   margin: 10px;
-  border: var(--borders);
-  box-shadow: var(--card-box-shadow);
 }
 
 .card-content {

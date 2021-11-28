@@ -33,6 +33,8 @@ main > section {
   justify-content: center;
   align-items: center;
   width: 80%;
+  background-color: rgba(245, 245, 245, 0.5);
+  padding: 18px;
 }
 
 .login h1 {
@@ -73,10 +75,10 @@ main > section {
   }
 
   .login {
+    background-color: rgba(245, 245, 245, 0.5);
     border: var(--borders);
     padding: 20px;
     border-radius: var(--card-border-radius);
-    box-shadow: var(--card-box-shadow);
     width: 100%;
   }
 
