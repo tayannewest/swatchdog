@@ -48,6 +48,7 @@ class Artsupply(models.Model):
 
   def get_absolute_url(self):
     return reverse("artsupplies_detail", kwargs={"artsupply_id": self.id})
+    
 
 class Photo(models.Model):
   url = models.CharField(max_length=250)

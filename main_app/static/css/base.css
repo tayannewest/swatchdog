@@ -103,7 +103,7 @@ nav li {
 }
 
 .btn {
-  color: rgb(0, 46, 27);
+  color: rgb(0, 0, 0);
   font-size: var(--font-l);
   padding: 8px 16px;
   border-radius: 6px;

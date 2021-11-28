@@ -20,12 +20,14 @@
       <h3>Familiarity with this product: {{ artsupply.familiarity }}
           <p>From 0 (first time use) to 5 (regular professional use)</p>
       </h3>
-      <h3>Would you recommend this? {{ artsupply.favorite}}</h3>
-      <p>{{ artsupply.description }}</p>
-        <div class="artsupply-actions">
+        <h3>Would you recommend this? {{ artsupply.favorite }}</h3>
+        <p>{{ artsupply.description }}</p>
+    {% if user == artsupply.user %}
+      <div class="artsupply-actions">
       <a href="{% url 'artsupplies_update' artsupply.id %}" class="btn">Edit</a>
       <a href="{% url 'artsupplies_delete' artsupply.id %}" class="btn danger">Delete</a>
         </div>
+    {% endif %}
         <h3>Add some swatches for the {{artsupply.brand}} {{ artsupply.name }}</h3>
       <p id="file-name"></p>
     <form 
@@ -38,7 +40,7 @@
         Choose photo
         <input type="file" name="photo-file" id="file-input" multiple>
       </label>
-      <button type="submit" class="btn">Upload Photo</button>
+      <button class="btn" type="submit">Upload Photo</button>
     </form>
   </div>
   <div class="artsupply-img">
@@ -49,7 +51,9 @@
         class="usr-img"
       >
     {% else %}
-      No images uploaded yet
+      <img src="" 
+      alt="swatchdog logo"
+      class="usr-img">
     {% endif %}
   </div>
   </section>

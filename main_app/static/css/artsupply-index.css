@@ -5,6 +5,15 @@
   flex-wrap: wrap;
 }
 
+.card:hover {
+  background-color: rgba(0, 46, 27, 0.7);
+  color: white;
+}
+
+/* .card-content:hover {
+  color: white;
+} */
+
 .card {
   width: 275px;
   margin: 10px;

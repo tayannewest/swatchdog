@@ -50,7 +50,7 @@ class ArtsupplyCreate(CreateView):
 class ArtsupplyUpdate(UpdateView):
   model =Artsupply
   fields = ["familiarity", "description", "favorite"]
-
+    
 class ArtsupplyDelete(DeleteView):
   model = Artsupply
   success_url = "/artsupplies/"
