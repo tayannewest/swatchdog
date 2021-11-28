@@ -18,7 +18,7 @@
 <section class="card-container">
   {% for artsupply in artsupplies %}
     <div class="card">
-      <a href="/artsupplies/{{ artsupply.id }}">
+      <a href="{% url 'artsupplies_detail' artsupply.id %}">
         <div class="card-content">
           <div class="card-img-container">
             <img 
@@ -27,7 +27,7 @@
             >
           </div>
           <h2 class="card-title">{{ artsupply.name }}</h2>
-            <p>A {{ artsupply.media }} from {{ artsupply.brand }}</p>
+            <p>A {{ artsupply.medium }} from {{ artsupply.brand }}</p>
           <p><small>{{ artsupply.description }}</small></p>
         </div>
       </a>

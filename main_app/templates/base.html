@@ -29,11 +29,12 @@
     <nav>
       <ul>
         {% if user.is_authenticated %}
-          <li><a href="/artsupplies">All Supplies</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a href="{% url 'artsupplies_index' %}">All Supplies</a></li>
+          <li><a href="{% url 'artsupplies_create' %}">Add an Art Supply</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'logout' %}">Log Out</a></li>
         {% else %}
-          <li><a href="/about">About</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'home' %}">Login</a></li>
           <li><a href="{% url 'signup' %}">Sign Up</a></li>
         {% endif %}
