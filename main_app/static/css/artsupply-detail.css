@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .artsupply-img {
@@ -96,13 +97,20 @@
     flex-direction: row;
     align-items: center;
     justify-content: start;
+    text-align: left;
+    margin-left: 35px;
   }
 
   .artsupply-img {
-    width: 25%;
-    max-width: 250px;
-    margin-right: 25px;
+    width: 100%;
+    max-width: 400px;
+    margin-right: 35px;
   }
+
+  .btn {
+    margin: 5px;
+  }
+
 }
 
 @media only screen and (min-width: 1024px) {

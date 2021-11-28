@@ -18,6 +18,7 @@
       <h2>Art Supply: {{ artsupply.medium }}</h2>
       <h2>Brand: {{ artsupply.brand }}</h2>
       <h3>Familiarity with this product: {{ artsupply.familiarity }}
+          <p>From 0 (first time use) to 5 (regular professional use)</p>
       </h3>
       <h3>Would you recommend this? {{ artsupply.favorite}}</h3>
       <p>{{ artsupply.description }}</p>
@@ -34,10 +35,10 @@
     >
       {% csrf_token %}
       <label class="btn">
-        Choose photo(s)
+        Choose photo
         <input type="file" name="photo-file" id="file-input" multiple>
       </label>
-      <button type="submit" class="btn">Upload Photo(s)</button>
+      <button type="submit" class="btn">Upload Photo</button>
     </form>
   </div>
   <div class="artsupply-img">
