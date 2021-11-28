@@ -21,6 +21,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   font-family: "Merriweather", serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",

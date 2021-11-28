@@ -15,6 +15,7 @@
   <section class="artsupply-container">
   <div class="artsupply-details">
     <h1>{{ artsupply.name }}</h1>
+      <p><small>Submitted by {{ artsupply.user }}</small></p>
       <h2>Art Supply: {{ artsupply.medium }}</h2>
       <h2>Brand: {{ artsupply.brand }}</h2>
       <h3>Familiarity with this product: {{ artsupply.familiarity }}
@@ -28,6 +29,7 @@
       <a href="{% url 'artsupplies_delete' artsupply.id %}" class="btn danger">Delete</a>
         </div>
     {% endif %}
+    {% if user == artsupply.user %}
         <h3>Add some swatches for the {{artsupply.brand}} {{ artsupply.name }}</h3>
       <p id="file-name"></p>
     <form 
@@ -42,12 +44,13 @@
       </label>
       <button class="btn" type="submit">Upload Photo</button>
     </form>
+    {% endif %}
   </div>
   <div class="artsupply-img">
     {% if artsupply.photo.url %}
       <img 
         src="{{artsupply.photo.url}}"
-        alt="user upload"
+        alt="a photo of {{artsupply.name}}"
         class="usr-img"
       >
     {% else %}

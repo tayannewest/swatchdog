@@ -9,26 +9,28 @@
 
 <section class="page-header">
   <h1>Art Supplies</h1>
-  <img src="{% static 'images/cool-cat.svg' %}" alt="A cool cat" />
-  <img src="{% static 'images/happy-cat.svg' %}" alt="A happy cat" />
-  <img src="{% static 'images/teacup-cat.svg' %}" alt="A cat in a teacup" />
-  <img src="{% static 'images/cat-in-box.svg' %}" alt="A cat in a box" />
 </section>
 
 <section class="card-container">
   {% for artsupply in artsupplies %}
     <div class="card">
       <a href="{% url 'artsupplies_detail' artsupply.id %}">
-        <div class="card-content">
           <div class="card-img-container">
+          {% if artsupply.photo.url %}
+            <img src="{{artsupply.photo.url}}" 
+            alt="a swatch photo of {{artsupply.name}}"
+            class="usr-img">
+          {% else %}
             <img 
               src="{% static 'images/sk8r-boi-cat.svg' %}" 
               alt="A skater boy cat"
             >
+          {% endif %}
           </div>
-          <h2 class="card-title">{{ artsupply.name }}</h2>
-            <p>A {{ artsupply.medium }} from {{ artsupply.brand }}</p>
-          <p><small>Submitted by {{ artsupply.user }}</small></p>
+          <div class="card-content">
+            <h2 class="card-title">{{ artsupply.name }}</br>
+            <span>A {{ artsupply.medium }} from {{ artsupply.brand }}</span></h2>
+          </div>
         </div>
       </a>
     </div>
