@@ -50,7 +50,7 @@
   padding: 1.5rem;
   display: flex;
   justify-content: center;
-  background-color: rgba(0, 46, 27, 0.7);
+  background-color: rgba(7, 68, 33, 0.7);
   border-radius: 5px;
   z-index: 1;
   align-items: flex-end;
@@ -88,6 +88,7 @@
 .usr-img {
   width: 100%;
   border-radius: 5px;
+  position: absolute;
 }
 
 .card > a {
