@@ -57,6 +57,7 @@ class ArtsupplyDelete(DeleteView):
 
 def add_photo(request, artsupply_id):
   photo_file = request.FILES.get("photo-file", None)
+  print(photo_file)
   if photo_file:
     s3 = boto3.client("s3")
     key = uuid.uuid4().hex + photo_file.name[photo_file.name.rfind("."):]
@@ -64,7 +65,7 @@ def add_photo(request, artsupply_id):
       s3.upload_fileobj(photo_file, BUCKET, key)
       url = f"{S3_BASE_URL}{BUCKET}/{key}"
       photo = Photo(url=url, artsupply_id=artsupply_id)
-      artsupply_photo = Photo(url=url, artsupply_id=artsupply_id)
+      artsupply_photo = Photo.objects.filter(artsupply_id=artsupply_id)
       if artsupply_photo.first():
           artsupply_photo.first().delete()
       photo.save()
