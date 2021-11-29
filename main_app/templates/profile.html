@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block head %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}"/>
 {% endblock %}
 
 {% block content %}
@@ -19,7 +19,10 @@
             alt="a swatch photo of {{artsupply.name}}"
             class="usr-img">
           {% else %}
-            You haven't reviewed anything yet.
+            <img 
+              src="{% static 'images/logo-gray.png' %}" 
+              alt="SwatchDog logo"
+            >
           {% endif %}
           </div>
           <div class="card-content">
