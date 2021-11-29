@@ -24,7 +24,7 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   min-height: 100vh;
-  background-image: linear-gradient(rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.4)), url("../images/paintbrush-bg.jpeg");
+  background-image: linear-gradient(rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.7)), url("../images/paint-bg.jpeg");
   background-color: rgba (255, 255, 255, 0.4);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -164,6 +164,11 @@ a {
 
 .page-header img:first-of-type {
   margin-left: 20px;
+}
+
+footer {
+  margin: 20px;
+  font-size: 12px;
 }
 
 @media only screen and (min-width: 768px) {

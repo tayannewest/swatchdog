@@ -1,21 +1,26 @@
 .form-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
+  /* background-color: rgba(245, 245, 245, 0.7); */
+  margin: 30px;
+  border-radius: 5px;
 }
 
 table {
   padding: 0 40px;
-  width: 100%;
+  width: 80%;
   border-spacing: 0 20px;
 }
 
 th {
   text-align: left;
-  padding: 6px 20px 0 0;
+  padding: 6px 20px 0 20px;
   font-weight: normal;
   vertical-align: top;
   font-size: var(--font-reg);
+  width: 40%;
 }
 
 td {
@@ -33,7 +38,18 @@ td > textarea {
   font-family: inherit;
 }
 
+#id_favorite {
+  height: 25px;
+}
+
 .btn {
-  align-self: flex-end;
-  margin-right: 40px;
+  max-width: 30%;
+  margin-left: 35%;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn {
+    max-width: 20%;
+    margin-left: 45%;
+  }
 }

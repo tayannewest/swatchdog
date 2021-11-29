@@ -40,7 +40,7 @@ class Artsupply(models.Model):
     validators=[MaxValueValidator(5), MinValueValidator(0)]
   )
   description = TextField(max_length=500)
-  favorite = BooleanField()
+  favorite = BooleanField("Check this box if you'll use it again")
   user = models.ForeignKey(User, on_delete=models.CASCADE)
 
   def __str__(self):
@@ -48,7 +48,7 @@ class Artsupply(models.Model):
 
   def get_absolute_url(self):
     return reverse("artsupplies_detail", kwargs={"artsupply_id": self.id})
-    
+
 
 class Photo(models.Model):
   url = models.CharField(max_length=250)
