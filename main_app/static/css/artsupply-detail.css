@@ -15,10 +15,14 @@
 .usr-img {
   width: 100%;
   border-radius: var(--card-border-radius);
+  margin: 20px;
 }
 
 .artsupply-details {
   width: 60%;
+  background-color: rgba(245, 245, 245, 0.7);
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .artsupply-actions {

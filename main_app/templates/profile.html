@@ -2,13 +2,35 @@
 {% load static %}
 
 {% block head %}
-{% comment %} <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}"/> {% endcomment %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
 {% endblock %}
 
 {% block content %}
 
 <section class="about">
 <h1>Profile Placeholder Stuff</h1>
+{% for artsupply in artsupplies %}
+  {% if user == artsupply.user %}
+    <div class="card">
+      <a href="{% url 'artsupplies_detail' artsupply.id %}">
+          <div class="card-img-container">
+          {% if artsupply.photo.url %}
+            <img src="{{artsupply.photo.url}}" 
+            alt="a swatch photo of {{artsupply.name}}"
+            class="usr-img">
+          {% else %}
+            You haven't reviewed anything yet.
+          {% endif %}
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">{{ artsupply.name }}</br>
+            <span>A {{ artsupply.medium }} from {{ artsupply.brand }}</span></h2>
+          </div>
+        </div>
+      </a>
+    </div>
+  {% endif %}
+{% endfor %}
 </section>
 
 {% endblock %}
