@@ -1,9 +1,9 @@
+
 .form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  /* background-color: rgba(245, 245, 245, 0.7); */
   margin: 30px;
   border-radius: 5px;
 }
@@ -16,11 +16,10 @@ table {
 
 th {
   text-align: left;
-  padding: 6px 20px 0 20px;
   font-weight: normal;
   vertical-align: top;
   font-size: var(--font-reg);
-  width: 40%;
+  width: 50%;
 }
 
 td {
@@ -31,6 +30,7 @@ td > * {
   width: 100%;
   padding: 2px 4px;
   font-size: var(--font-l);
+  font-family: "Merriweather", serif;
 }
 
 td > textarea {
@@ -48,8 +48,24 @@ td > textarea {
 }
 
 @media only screen and (min-width: 768px) {
+  .form-daddy {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
+    background-color: rgba(245, 245, 245, 0.7);
+    margin: 30px;
+    border-radius: 5px;
+  }
+
   .btn {
     max-width: 20%;
-    margin-left: 45%;
+    margin-left: 48%;
   }
 }
+
