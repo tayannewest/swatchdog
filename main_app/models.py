@@ -52,8 +52,7 @@ class Artsupply(models.Model):
 
 class Photo(models.Model):
   url = models.CharField(max_length=250)
-  artsupply = models.OneToOneField(Artsupply, on_delete=models.CASCADE)
-  # image = models.ImageField(upload_to="images/")
+  artsupply = models.ForeignKey(Artsupply, on_delete=models.CASCADE)
 
   def __str__(self):
     return f"Photo for artsupply_id: {self.artsupply_id} @{self.url}"

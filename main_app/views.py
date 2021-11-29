@@ -69,10 +69,11 @@ def add_photo(request, artsupply_id):
       s3.upload_fileobj(photo_file, BUCKET, key)
       url = f"{S3_BASE_URL}{BUCKET}/{key}"
       photo = Photo(url=url, artsupply_id=artsupply_id)
-      artsupply_photo = Photo.objects.filter(artsupply_id=artsupply_id)
-      if artsupply_photo.first():
-          artsupply_photo.first().delete()
+      # artsupply_photo = Photo.objects.filter(artsupply_id=artsupply_id)
+      # if artsupply_photo.first():
+      #     artsupply_photo.first().delete()
       photo.save()
     except Exception as err:
       print("An error occurred uploading file to S3: %s" % err)
   return redirect("artsupplies_detail", artsupply_id=artsupply_id)
+

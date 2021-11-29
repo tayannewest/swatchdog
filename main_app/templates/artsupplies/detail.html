@@ -16,13 +16,13 @@
   <div class="artsupply-details">
     <h1>{{ artsupply.name }}</h1>
       <p><small>Submitted by {{ artsupply.user }}</small></p>
-      <h2>Art Supply: {{ artsupply.get_medium_display }}</h2>
-      <h2>Brand: {{ artsupply.brand }}</h2>
+      <h2>This is a {{ artsupply.get_medium_display }}</h2>
+      <h2>from {{ artsupply.brand }}</h2>
       <h3>Familiarity with this product: {{ artsupply.familiarity }}
           <p>From 0 (first time use) to 5 (regular professional use)</p>
       </h3>
-        <h3>Would you recommend this? {{artsupply.favorite|yesno:"Yes, No, Maybe"}}</h3>
-        <p>{{ artsupply.description }}</p>
+        <h3>Would you recommend this?  {{artsupply.favorite|yesno:" Yes, No, Maybe"}}</h3>
+        <h3>Artist Review: <br> <p>{{ artsupply.description }}</p></h3>
     {% if user == artsupply.user %}
       <div class="artsupply-actions">
       <a href="{% url 'artsupplies_update' artsupply.id %}" class="btn">Edit</a>
@@ -40,23 +40,25 @@
       {% csrf_token %}
       <label class="btn">
         Choose photo
-        <input type="file" name="photo-file" id="file-input" multiple>
+        <input type="file" name="photo-file" id="file-input">
       </label>
       <button class="btn" type="submit">Upload Photo</button>
     </form>
     {% endif %}
   </div>
   <div class="artsupply-img">
-    {% if artsupply.photo.url %}
-      <img 
-        src="{{artsupply.photo.url}}"
-        alt="a photo of {{artsupply.name}}"
-        class="usr-img"
-      >
-    {% else %}
-      <img src="{% static 'images/logo.png' %}" 
-      alt="swatchdog logo"
-      class="usr-img">
+    {% if artsupply.photo_set.all.count %}
+      {% for photo in artsupply.photo_set.all %}
+        <img 
+          src="{{photo.url}}"
+          alt="a photo of art supply"
+          class="usr-img"
+        >
+      {% endfor %}
+      {% comment %} {% else %}
+        <img src="{% static 'images/logo.png' %}" 
+        alt="swatchdog logo"
+        class="usr-img"> {% endcomment %}
     {% endif %}
   </div>
   </section>
