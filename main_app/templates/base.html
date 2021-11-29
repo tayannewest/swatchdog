@@ -12,7 +12,7 @@
   <link
     rel="shortcut icon"
     type="image/png"
-    href=""
+    href="{% static 'images/logo.png' %}"
   >
   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
   <title>SwatchDog</title>
@@ -24,10 +24,12 @@
     <div class="header-logo-container">
       <a href="/">
         <img 
-          src="" 
+          src="{% static 'images/logo.png' %}" 
           alt="The SwatchDog Logo"
+          class="logo"
         >
       </a>
+      <a href="/"><h2>SwatchDog</h2></a>
     </div>
     <nav>
       <ul>

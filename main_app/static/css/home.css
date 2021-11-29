@@ -21,10 +21,17 @@ main > section {
 
 .logo-container {
   max-width: 375px;
+  font-family: "Shadows Into Light", cursive;
+  text-align: center;
+  font-size: 50px;
 }
 
-.cat-container {
-  width: 80%;
+.logo-container h1 {
+  margin: -20px;
+}
+
+.logo-container img {
+  margin: -20px;
 }
 
 .login {

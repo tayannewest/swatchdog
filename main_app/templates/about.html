@@ -1,11 +1,18 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}"/>
+{% endblock %}
 
 {% block content %}
 
-<h1>Welcome to SwatchDog</h1>
+<section class="about">
+<h1>Welcome to SwatchDog! We'll keep an eye on things.</h1>
 <hr />
 <p>
-  This is going to say something more interesting soon
+  SwatchDog is a site designed to help beginners, hobbyists, and professional artists alike keep track of the supplies and media they've used so they have an easy place to reference what they love and what they don't. It's also a great way to discover new supplies used by other artists and get an idea of how they work beofre trying them yourself.
 </p>
+</section>
 
 {% endblock %}
