@@ -16,10 +16,12 @@
     <div class="card">
       <a href="{% url 'artsupplies_detail' artsupply.id %}">
           <div class="card-img-container">
-          {% if artsupply.photo.url %}
-            <img src="{{artsupply.photo.url}}" 
+          {% if artsupply.photo_set.all.count %}
+          {% comment %} {% for photo in artsupply.photo_set.all %} {% endcomment %}
+            <img src="{{photo.url}}" 
             alt="a swatch photo of {{artsupply.name}}"
             class="usr-img">
+          {% comment %} {% endfor %} {% endcomment %}
           {% else %}
             <img 
               src="{% static 'images/logo-gray.png' %}" 
