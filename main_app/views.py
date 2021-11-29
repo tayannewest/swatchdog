@@ -18,7 +18,8 @@ def about(request):
   return render(request, "about.html")
 
 def profile(request):
-  return render(request, "profile.html")
+  artsupplies = Artsupply.objects.all()
+  return render(request, "profile.html", {"artsupplies": artsupplies})
 
 def artsupplies_index(request):
   artsupplies = Artsupply.objects.all()
