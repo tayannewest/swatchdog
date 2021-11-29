@@ -7,8 +7,9 @@
 
 {% block content %}
 
-<section class="about">
-<h1>Profile Placeholder Stuff</h1>
+<h1>Your Palette</h1>
+<hr />
+<section class="card-container">
 {% for artsupply in artsupplies %}
   {% if user == artsupply.user %}
     <div class="card">
@@ -27,7 +28,7 @@
           </div>
           <div class="card-content">
             <h2 class="card-title">{{ artsupply.name }}</br>
-            <span>A {{ artsupply.medium }} from {{ artsupply.brand }}</span></h2>
+              <span>A {{ artsupply.get_medium_display }} from {{ artsupply.brand }}</span></h2>
           </div>
         </div>
       </a>
