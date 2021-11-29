@@ -24,7 +24,7 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   min-height: 100vh;
-  background-image: linear-gradient(rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.7)), url("../images/paint-bg.jpeg");
+  background-image: linear-gradient(rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.7)), url("../images/paintbrush-bg.jpeg");
   background-color: rgba (255, 255, 255, 0.4);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -37,7 +37,6 @@ body {
   --button-bg: rgb(245, 245, 245);
   --button-bg-hover: rgb(226, 226, 226);
   --danger: rgb(220, 20, 30);
-  --card-box-shadow: 5px 5px 6px -1px #AAA;
   --font-xtreme: 4.2rem;
   --font-xxl: 3.6rem;
   --font-xl: 2.4rem;
