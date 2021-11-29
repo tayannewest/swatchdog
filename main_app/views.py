@@ -17,6 +17,9 @@ class Home(LoginView):
 def about(request):
   return render(request, "about.html")
 
+def profile(request):
+  return render(request, "profile.html")
+
 def artsupplies_index(request):
   artsupplies = Artsupply.objects.all()
   return render(request, "artsupplies/index.html", {"artsupplies": artsupplies})

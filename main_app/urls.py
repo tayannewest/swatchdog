@@ -11,4 +11,5 @@ urlpatterns = [
   path("artsupplies/<int:pk>/update/", views.ArtsupplyUpdate.as_view(), name="artsupplies_update"),
   path("artsupplies/<int:pk>/delete/", views.ArtsupplyDelete.as_view(), name="artsupplies_delete"),
   path("artsupplies/<int:artsupply_id>/add_photo/", views.add_photo, name="add_photo"),
+  path("profile/", views.profile, name="profile"),
 ]
