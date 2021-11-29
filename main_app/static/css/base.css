@@ -57,6 +57,12 @@ nav {
   margin: 5px;
 }
 
+nav * {
+  box-sizing: border-box;
+  transition: all .65s ease;
+  color: rgb(255, 219, 120);
+}
+
 ul {
   margin: 0;
   list-style: none;
@@ -76,10 +82,11 @@ nav a {
   color: var(--text-color);
   font-weight: 600;
   font-size: 16px;
+  position: relative;
 }
 
 nav a:hover {
-  color: var(--link-hover-color)
+  color: var(--link-hover-color),
 }
 
 nav ul {
