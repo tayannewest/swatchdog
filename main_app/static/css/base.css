@@ -36,7 +36,6 @@ body {
   --link-hover-color: rgb(255, 219, 120);
   --button-bg: rgb(245, 245, 245);
   --button-bg-hover: rgb(226, 226, 226);
-  --danger: rgb(220, 20, 30);
   --font-xtreme: 4.2rem;
   --font-xxl: 3.6rem;
   --font-xl: 2.4rem;
@@ -140,8 +139,7 @@ a {
   font-size: var(--font-l);
   padding: 8px 16px;
   border-radius: 6px;
-  border-width: 2px;
-  border-style: solid;
+  border: 2px solid rgb(0, 0, 0);
   text-decoration: none;
   background-color: var(--button-bg);
   font-weight: 600;
@@ -152,11 +150,6 @@ a {
 
 .btn:hover {
   background-color: var(--button-bg-hover);
-}
-
-.danger {
-  color: var(--danger);
-  border-color: var(--danger);
 }
 
 .page-header h1 {

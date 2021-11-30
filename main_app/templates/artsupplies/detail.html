@@ -26,7 +26,7 @@
     {% if user == artsupply.user %}
       <div class="artsupply-actions">
       <a href="{% url 'artsupplies_update' artsupply.id %}" class="btn">Edit</a>
-      <a href="{% url 'artsupplies_delete' artsupply.id %}" class="btn danger">Delete</a>
+      <a href="{% url 'artsupplies_delete' artsupply.id %}" class="btn">Delete</a>
         </div>
     {% endif %}
     </section>

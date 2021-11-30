@@ -29,16 +29,6 @@
   margin-top: 20px;
 }
 
-.subsection-title {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.subsection-content {
-  margin: 0 8px;
-}
-
 .artsupply-details h1 {
   font-size: var(--font-xxl);
   margin: 5px 0 3px;
