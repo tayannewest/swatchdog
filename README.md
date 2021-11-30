@@ -29,6 +29,7 @@ http://swatchdog.herokuapp.com/
 
 # Planned Improvements
 * Add a search function
+* Add a randomized art supply picker
 * Add edit functionality for photos
 * Add ability to bookmark other artists' reviews and supplies to your profile
 
