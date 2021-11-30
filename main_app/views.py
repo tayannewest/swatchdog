@@ -22,7 +22,7 @@ def profile(request):
   return render(request, "profile.html", {"artsupplies": artsupplies})
 
 def artsupplies_index(request):
-  artsupplies = Artsupply.objects.all()
+  artsupplies = Artsupply.objects.all().order_by("-pk")
   return render(request, "artsupplies/index.html", {"artsupplies": artsupplies})
 
 def signup(request):
