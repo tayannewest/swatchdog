@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Artsupply, Photo
@@ -21,6 +23,7 @@ def profile(request):
   artsupplies = Artsupply.objects.all()
   return render(request, "profile.html", {"artsupplies": artsupplies})
 
+@login_required
 def artsupplies_index(request):
   artsupplies = Artsupply.objects.all().order_by("-pk")
   return render(request, "artsupplies/index.html", {"artsupplies": artsupplies})
@@ -39,11 +42,12 @@ def signup(request):
   context = {"form": form, "error_message": error_message}
   return render(request, "signup.html", context)
 
+@login_required
 def artsupplies_detail(request, artsupply_id):
   artsupply = Artsupply.objects.get(id=artsupply_id)
   return render(request, "artsupplies/detail.html", {"artsupply": artsupply})
 
-class ArtsupplyCreate(CreateView):
+class ArtsupplyCreate(LoginRequiredMixin, CreateView):
   model = Artsupply
   fields = ["name", "brand", "medium", "familiarity", "description", "favorite"]
 
@@ -51,14 +55,15 @@ class ArtsupplyCreate(CreateView):
     form.instance.user = self.request.user
     return super().form_valid(form)
 
-class ArtsupplyUpdate(UpdateView):
+class ArtsupplyUpdate(LoginRequiredMixin, UpdateView):
   model =Artsupply
   fields = ["familiarity", "description", "favorite"]
     
-class ArtsupplyDelete(DeleteView):
+class ArtsupplyDelete(LoginRequiredMixin, DeleteView):
   model = Artsupply
   success_url = "/artsupplies/"
 
+@login_required
 def add_photo(request, artsupply_id):
   photo_file = request.FILES.get("photo-file", None)
   print(photo_file)
