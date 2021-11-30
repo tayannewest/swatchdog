@@ -1,0 +1,11 @@
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.confirm-delete {
+  display: flex;
+  justify-content: center;
+}
