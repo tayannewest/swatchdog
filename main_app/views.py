@@ -20,7 +20,7 @@ def about(request):
   return render(request, "about.html")
 
 def profile(request):
-  artsupplies = Artsupply.objects.all()
+  artsupplies = Artsupply.objects.all().order_by("-pk")
   return render(request, "profile.html", {"artsupplies": artsupplies})
 
 @login_required
