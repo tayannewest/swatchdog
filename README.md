@@ -1,4 +1,4 @@
-# SwatchDog
+# 🐾 SwatchDog 🐾
 A Simple Application for Artists: Keep track of your favorite supplies with reviews and swatches you can access from anywhere
 
 # Background
