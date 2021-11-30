@@ -9,8 +9,8 @@
 }
 
 table {
-  padding: 0 40px;
-  width: 80%;
+  padding: 0 5px;
+  width: 100%;
   border-spacing: 0 20px;
 }
 
@@ -19,15 +19,15 @@ th {
   font-weight: normal;
   vertical-align: top;
   font-size: var(--font-reg);
-  width: 50%;
+  width: 40%;
 }
 
 td {
-  max-width: 60%;
+  max-width: 100%;
 }
 
 td > * {
-  width: 100%;
+  width: 80%;
   padding: 2px 4px;
   font-size: var(--font-l);
   font-family: "Merriweather", serif;
@@ -59,6 +59,7 @@ td > textarea {
     justify-content: center;
     width: 75%;
     background-color: rgba(245, 245, 245, 0.7);
+    padding: 10px;
     margin: 30px;
     border-radius: 5px;
     box-shadow: 5px 5px 6px -1px #AAA;
