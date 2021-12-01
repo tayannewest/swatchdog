@@ -6,16 +6,11 @@
   text-align: center;
 }
 
-.artsupply-img {
-  width: 100%;
-  max-width: 350px;
-  justify-self: center;
-}
 
 .usr-img {
   width: 100%;
   border-radius: var(--card-border-radius);
-  margin: 20px;
+  margin: auto;
 }
 
 .artsupply-details {
@@ -65,11 +60,19 @@
 .detail-imgs {
   text-align: center;
   margin: auto;
-  width: 92%;
+  width: 90%;
 }
 
 .detail-imgs p {
   font-size: 18px;
+}
+
+.detail-img-container {
+  margin: 20px;
+}
+
+.detail-img-container img {
+  margin-top: 20px;
 }
 
 .subsection-content p,
@@ -111,20 +114,18 @@
   padding: 40px;
 }
 
-  .artsupply-img {
-    width: 50%;
+  .usr-img {
+    width: 70%;
     max-width: 400px;
-    margin-right: 35px;
+    margin: 20px;
   }
 
   .detail-imgs {
-    position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
   }
 
   .detail-imgs p {
