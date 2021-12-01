@@ -17,7 +17,7 @@ http://swatchdog.herokuapp.com/
 
 | An index view of all art supplies | Quick Look showing name and brand |
 | :---------: | :---------: |
-|![submission page screenshot](https://i.imgur.com/CJeTtc7.png "Art Supply index page") | ![quick look screenshot](https://i.imgur.com/drsXF2s.png "Detailed review")
+|![submission page screenshot](https://i.imgur.com/MkjoTAP.png "Art Supply index page") | ![quick look screenshot](https://i.imgur.com/HKNNM16.png "quick look")
 
 | A detailed view of the art supply | Add as many photos as you'd like | 
 | :---------: | :---------: |
@@ -25,7 +25,7 @@ http://swatchdog.herokuapp.com/
 
 | Add your own art supply | It works on mobile too | Your personal reviews are also stored on your palette |
 | :---------: | :---------: | :---------: |
-|![art supply submission form](https://i.imgur.com/QntpJ9d.png "Art supply submission form") | ![mobile submission form](https://i.imgur.com/0810BVH.png "mobile submission form") | ![your palette mobile](https://i.imgur.com/3zPV1jE.png "your palette mobile view")
+|![art supply submission form](https://i.imgur.com/9RbLAYJ.png "Art supply submission form") | ![mobile submission form](https://i.imgur.com/iYcWCxi.png "mobile submission form") | ![your palette mobile](https://i.imgur.com/3zPV1jE.png "your palette mobile view")
 
 # Planned Improvements
 * Add a search function
