@@ -1,4 +1,3 @@
-
 .form-container {
   display: flex;
   flex-direction: column;
@@ -45,6 +44,12 @@ td > textarea {
 .btn {
   max-width: 30%;
   margin-left: 35%;
+}
+
+.page-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {

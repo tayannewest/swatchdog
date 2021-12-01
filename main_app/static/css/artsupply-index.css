@@ -1,3 +1,9 @@
+.page-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 .card-container {
   position: relative;
   display: flex;
@@ -106,6 +112,7 @@
   font-size: var(--font-reg);
 }
 
+
 @media (max-width: 600px) {
   .card-container .card:hover .card-content {
     transform: translate(0, 4rem);
@@ -113,6 +120,5 @@
   .card-container .card:hover .card-img-container {
     transform: translate(0, -4rem);
   }
-
 
 }
